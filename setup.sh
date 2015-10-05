@@ -3,6 +3,12 @@
 echo "setup [START]"
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
+if [ -f ~/.vimrc ];
+then
+    rm ~/.vimrc
+fi
+ln -s $DIR/vimrc ~/.vimrc
+
 if [ -f ~/.xombrero.conf ];
 then
     rm ~/.xombrero.conf
